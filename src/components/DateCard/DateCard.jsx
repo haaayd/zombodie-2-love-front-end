@@ -10,8 +10,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const DateCard = ({ profile, handleLiked, potentialMatch }) => {
-  const [liked, setLiked] = useState([]);
-  const [disliked, setDisliked] = useState([]);
+  // const [liked, setLiked] = useState([]);
+  // const [disliked, setDisliked] = useState([]);
 
   // const handleLiked = async () => {
   //   handleLiked(profile._id, likedId);

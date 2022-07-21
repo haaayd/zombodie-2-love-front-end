@@ -1,5 +1,4 @@
 import DateCard from "../../components/DateCard/DateCard";
-import { Link } from "react-router-dom";
 import * as profileService from "../../services/profileService"
 import { createChat } from "../../services/chatService";
 
@@ -11,11 +10,11 @@ const Profiles = (props) => {
     if (profile.prefersZombie && p.species === "zombie") return true;
     if (profile.prefersHuman && p.species === "human") return true;
     if (profile.prefersHalfbie && p.species === "halfbie") return true;
-    return false;
-  };
+    return false
+  }
   const filter = profiles.filter(
     (p) => brainPreference(p) && speciesPreference(p) && removeSelf(p)
-  );
+  )
   const handleLiked = async (profileId, potentialMatch) => {
     const res = await profileService.liked(profileId, potentialMatch._id) 
     console.log(res) 
@@ -31,8 +30,8 @@ const Profiles = (props) => {
 
   }
 
-  console.log("THIS IS THE PROFILE HAYDEE", profile);
-  console.log(filter);
+  // console.log("THIS IS THE PROFILE HAYDEE", profile);
+  // console.log(filter);
   return (
     <>
       <h1>Potential Matches</h1>
